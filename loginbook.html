@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bookstore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .login-container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .signup-btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px;
+            width: calc(100% - 20px);
+            cursor: pointer;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .signup-btn:hover {
+            background-color: #218838;
+        }
+        .back-btn {
+            display: block;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            padding: 10px;
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Bookstore</h2>
+        <form id="loginForm" onsubmit="return authenticate()">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <button class="signup-btn" id="signupButton">Sign Up</button>
+        <a href="homepage.html" class="back-btn">Back to Home Page</a>
+    </div>
+
+    <script>
+        function authenticate() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+          
+            if (username === "admin" && password === "admin") {
+                
+                window.location.href = "homepage.html";
+                return false; 
+            } else {
+                
+                alert("Incorrect username or password. Please try again.");
+                return false; 
+            }
+        }
+
+        document.getElementById("signupButton").addEventListener("click", function() {
+            window.location.href = "signup.html";
+        });
+    </script>
+</body>
+</html>

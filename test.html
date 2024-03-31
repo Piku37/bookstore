@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factorial Table Generator</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<h2>Factorial Table Generator</h2>
+
+<p>Enter the range for factorial table:</p>
+<input type="number" id="startRange" placeholder="Start" min="0" step="1">
+<input type="number" id="endRange" placeholder="End" min="0" step="1">
+<button onclick="generateTable()">Generate Table</button>
+
+<div id="tableContainer"></div>
+
+<script>
+function generateFactorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        return n * generateFactorial(n - 1);
+    }
+}
+
+function generateTable() {
+    var startRange = parseInt(document.getElementById("startRange").value);
+    var endRange = parseInt(document.getElementById("endRange").value);
+    var tableContainer = document.getElementById("tableContainer");
+    tableContainer.innerHTML = "";
+
+    if (isNaN(startRange) || isNaN(endRange) || startRange < 0 || endRange < 0 || startRange > endRange) {
+        alert("Please enter valid range values.");
+        return;
+    }
+
+    var table = document.createElement("table");
+    var headerRow = table.insertRow();
+    var headerCell1 = headerRow.insertCell();
+    var headerCell2 = headerRow.insertCell();
+    headerCell1.innerHTML = "<strong>Number</strong>";
+    headerCell2.innerHTML = "<strong>Factorial</strong>";
+
+    for (var i = startRange; i <= endRange; i++) {
+        var row = table.insertRow();
+        var cell1 = row.insertCell();
+        var cell2 = row.insertCell();
+        cell1.textContent = i;
+        cell2.textContent = generateFactorial(i);
+    }
+
+    tableContainer.appendChild(table);
+}
+</script>
+
+</body>
+</html>

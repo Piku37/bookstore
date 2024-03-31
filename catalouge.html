@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #ccc;
+            border-radius: 5px;
+        }
+        main {
+            padding: 20px;
+        }
+        .filters {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .book-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .book {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .book img {
+            max-width: 100%;
+            max-height: 200px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book Catalog</h1>
+    </header>
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="#">Books</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact</a>
+        <a href="loginbook.html">Login</a>
+    </nav>
+    <main>
+        <div class="filters">
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="price">Price</option>
+            </select>
+        </div>
+        <div class="book-container">
+            <div class="book">
+                <img src="image_bookstore/1.jpg" alt="book 1">
+                <h3>The NIghtangle</h3>
+                <h4>$12</h4>
+                <button>Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="image_bookstore/2.jpg" alt="Book 2">
+                <h3>King of Greed: from the bestselling author of the Twisted series (Kings of Sin)
+                </h3>
+                <h4>$15</h4>
+                <button>Add to Cart</button>
+            </div>
+        
+            <div class="book">
+                <img src="image_bookstore/3.jpg" alt="Book 3">
+                <h3>My fault 1 
+                </h3>
+                <h4>$18</h4>
+                <button>Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="image_bookstore/4.jpg" alt="Book 4">
+                <h3>The Housemaid
+                </h3>
+                <h4>$22</h4>
+                <button>Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="image_bookstore/5.jpg" alt="Book 5">
+                <h3>The Subtle Art of not giving a fuck
+                </h3>
+                <h4>$42</h4>
+                <button>Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="image_bookstore/7.jpg" alt="Book 6">
+                <h3>Rich Dad Poor Dad
+                </h3>
+                <h4>$17</h4>
+                <button>Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="image_bookstore/8.jpg" alt="Book 8">
+                <h3>Think Like a Monk
+                </h3>
+                <h4>$11</h4>
+                <button>Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="image_bookstore/9.jpg" alt="Book 9">
+                <h3>Deep Work
+                </h3>
+                <h4>$27</h4>
+                <button>Add to Cart</button>
+            
+            </div>
+            <div class="book">
+                <img src="image_bookstore/10.jpg" alt="Book 10">
+                <h3>Games People Play
+                </h3>
+                <h4>$19</h4>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bookstore. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #ccc;
+            border-radius: 5px;
+        }
+        main {
+            padding: 20px;
+        }
+        .book-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .book {
+            width: 30%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .book img {
+            max-width: 100%;
+            max-height: 200px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .login-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Bookstore</h1>
+        <p>Find your next favorite book here</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="catalouge.html">Books</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact</a>
+        <a href="loginbook.html"><button class="login-btn">Login</button></a>
+
+    </nav>
+    <main>
+        <h2>Featured Books</h2>
+        <div class="book-container">
+            <div class="book">
+                <img src="ah.jpeg" alt="Book 1">
+                <h3>Atomic habits</h3>
+                <p>provides a practical and proven framework for creating good habits and shedding bad ones.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="money.jpeg" alt="Book 2">
+                <h3>Pychology of Money</h3>
+                <p>Doing well with the money busineess </p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="image_bookstore/7.jpg" alt="Book 2">
+                <h3>Rich dad poor dad</h3>
+
+                <p>A great self help book to mend your future  </p>
+                <button>Add to Cart</button>
+            </div>
+           
+        </div>
+    </main>
+    <!-- <footer>
+        <p>&copy; 2024 Bookstore. All rights reserved.</p>
+    </footer> -->
+</body>
+</html>
